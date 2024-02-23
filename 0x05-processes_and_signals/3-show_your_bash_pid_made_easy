@@ -1,10 +1,5 @@
 #!/usr/bin/env bash
-# Displays "Best School" 10 times using an until loop.
+# Displays the PID along with the process name, of 
+#+ processes whose name contains the word "bash".
 
-count=0
-
-until [ $count -eq 10 ]
-do
-	echo "Best School"
-	(( count++ ))
-done
+pgrep bash -l

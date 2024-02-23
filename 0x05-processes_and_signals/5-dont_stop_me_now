@@ -1,21 +1,4 @@
 #!/usr/bin/env bash
-# Loops from 1 to 10 and displays:
-#   "bad luck" for the 4th iteration
-#   "good luck" for the 8th iteration
-#   "Best School" for all other iterations
+# Kills the 4-to_infinity_and_beyond process
 
-count=0
-
-while [ $count -lt 10 ]
-do
-	if [ $count -eq 3 ]
-	then
-		echo "bad luck"
-	elif [ $count -eq 7 ]
-	then
-		echo "good luck"
-	else
-		echo "Best School"
-	fi
-	(( count++ ))
-done
+kill "$(pgrep -f 4-to_infinity_and_beyond)"
